@@ -7,10 +7,18 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "husky": "^3.0.9",
     "jest": "^24.0.0"
   },
   "scripts": {
     "start": "node src/index.js",
     "test": "jest ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test",
+      "...": "..."
+    }
   }
 }
